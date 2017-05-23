@@ -5,10 +5,10 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="http://zjbrook.club">
   <title>zjbrook</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#JS对象常用属性和方法分析 个人总结
+  <meta name="description" content="#JS对象常用属性和方法分析
 
 ##查看对象属性和方法的最佳方式
 打开浏览器，在控制台中输入：
@@ -17,12 +17,12 @@
 
 
 Object.arguments
-Object.as">
+Object.assign(t">
 <meta property="og:type" content="article">
 <meta property="og:title" content="zjbrook">
-<meta property="og:url" content="http://yoursite.com/2017/05/22/jsObj/index.html">
+<meta property="og:url" content="http://zjbrook.club/2017/05/22/jsObj/index.html">
 <meta property="og:site_name" content="zjbrook">
-<meta property="og:description" content="#JS对象常用属性和方法分析 个人总结
+<meta property="og:description" content="#JS对象常用属性和方法分析
 
 ##查看对象属性和方法的最佳方式
 打开浏览器，在控制台中输入：
@@ -31,11 +31,11 @@ Object.as">
 
 
 Object.arguments
-Object.as">
-<meta property="og:updated_time" content="2017-05-22T02:54:00.448Z">
+Object.assign(t">
+<meta property="og:updated_time" content="2017-05-23T01:58:08.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zjbrook">
-<meta name="twitter:description" content="#JS对象常用属性和方法分析 个人总结
+<meta name="twitter:description" content="#JS对象常用属性和方法分析
 
 ##查看对象属性和方法的最佳方式
 打开浏览器，在控制台中输入：
@@ -44,7 +44,7 @@ Object.as">
 
 
 Object.arguments
-Object.as">
+Object.assign(t">
   
     <link rel="alternative" href="/atom.xml" title="zjbrook" type="application/atom+xml">
   
@@ -189,8 +189,7 @@ Object.as">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<p>#JS对象常用属性和方法分析 个人总结</p>
+        <p>#JS对象常用属性和方法分析</p>
 <hr>
 <p>##查看对象属性和方法的最佳方式</p>
 <p>打开浏览器，在控制台中输入：</p>
@@ -331,7 +330,7 @@ Object.as">
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">'name'</span>, &#123;</div><div class="line">    configurable: <span class="literal">true</span>,</div><div class="line">    enumerable: <span class="literal">true</span>,</div><div class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'get'</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.value;</div><div class="line">    &#125;,</div><div class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'set'</span>);</div><div class="line">        <span class="keyword">this</span>.value = newValue;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//赋值会调用set方法</span></div><div class="line">obj.name = <span class="string">'John'</span>; <span class="comment">//set</span></div><div class="line"><span class="comment">//取值会调用get方法</span></div><div class="line">obj.name; <span class="comment">//get John</span></div></pre></td></tr></table></figure>
 <h4 id="get"><a href="#get" class="headerlink" title="get"></a>get</h4><p>一个属性提供getter的方法，如果没有getter则为undefined。该方法返回值被用作属性值。默认为undefined。存取描述符型对象在调用该对象时会调用该函数。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.defineProperty(obj, <span class="string">'name'</span>, &#123;</div><div class="line">    configurable: <span class="literal">true</span>,</div><div class="line">    enumerable: <span class="literal">true</span>,</div><div class="line">    get: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'get'</span>);</div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.value;</div><div class="line">    &#125;,</div><div class="line">    set: <span class="function"><span class="keyword">function</span> (<span class="params">newValue</span>) </span>&#123;</div><div class="line">        <span class="built_in">console</span>.log(<span class="string">'set'</span>);</div><div class="line">        <span class="keyword">this</span>.value = newValue;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//赋值会调用set方法</span></div><div class="line">obj.name = <span class="string">'John'</span>; <span class="comment">//set</span></div><div class="line"><span class="comment">//取值会调用get方法</span></div><div class="line">obj.name; <span class="comment">// get  John</span></div></pre></td></tr></table></figure>
-<!--more-->
+<a id="more"></a>
 
       
 
@@ -411,7 +410,7 @@ Object.as">
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/22/jsObj/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://zjbrook.club/2017/05/22/jsObj/" alt="微信分享二维码">
     </div>
 </div>
 
